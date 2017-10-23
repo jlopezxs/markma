@@ -1,0 +1,27 @@
+{
+  "name": "markma",
+  "version": "0.0.0",
+  "description": "",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run marko test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlopezxs/markma.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/jlopezxs/markma/issues"
+  },
+  "homepage": "https://github.com/jlopezxs/markma#readme",
+  "dependencies": {
+    "bulma": "^0.6.0",
+    "marko": "^4.5.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-marko": "^1.0.1"
+  }
+}
