@@ -1,0 +1,19 @@
+$ {
+  const { color='primary', size, height, class: className } = input;
+
+  const colorClass = color && `is-${color}`;
+  const sizeClass = size && `is-${size}`;
+  const heightClass = height && `is-${height}height`;
+}
+
+<section class=['hero', colorClass, sizeClass, heightClass, className]>
+  <div class="hero-head" if(input.header)>
+    <include(input.header)/>
+  </div>
+  <div class="hero-body" if(input.body)>
+    <include(input.body)/>
+  </div>
+  <div class="hero-foot" if(input.footer)>
+    <include(input.footer)/>
+  </div>
+</section>

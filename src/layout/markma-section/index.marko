@@ -1,0 +1,9 @@
+$ {
+  const { size, class: className } = input;
+
+  const sizeClassName = size && `is-${size}`;
+}
+
+<div class=['section', sizeClassName, className]>
+  <include(input)/>
+</div>

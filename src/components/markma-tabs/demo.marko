@@ -1,0 +1,19 @@
+$ {
+  const isActive = (pageId) => pageId === 'tabsComponent';
+  const tabsItems = [{
+    isActive: isActive('home'),
+    text: 'Home'
+  },
+  {
+    isActive: isActive('tabsComponent'),
+    text: 'Tabs Component'
+  }]
+}
+
+<markma-tabs style="boxed">
+  <for(tabsItem in tabsItems)>
+    <markma-tabs-item href=tabsItem.link isActive=tabsItem.isActive>
+      ${tabsItem.text}
+    </markma-tabs-item>
+  </for>
+</markma-tabs>

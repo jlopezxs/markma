@@ -1,0 +1,13 @@
+$ {
+  const { size, alignment, style, class:className } = input;
+
+  const sizeClass = size && `is-${size}`;
+  const alignmentClass = alignment && `is-${alignment}`;
+  const styleClass = style && `is-${style}`;
+}
+
+<nav class=["tabs", sizeClass, alignmentClass, styleClass, className]>
+  <ul>
+    <include(input)/>
+  </ul>
+</nav>

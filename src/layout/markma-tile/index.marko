@@ -1,0 +1,11 @@
+$ {
+  const { context, direction, size, class: className } = input;
+
+  const sizeClassName = size && `is-${size}`;
+  const contextClassName = context && `is-${context}`;
+  const directionClassName = direction && `is-${direction}`;
+}
+
+<div class=['tile', sizeClassName, contextClassName, directionClassName, className]>
+  <include(input)/>
+</div>

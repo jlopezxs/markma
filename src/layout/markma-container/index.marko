@@ -1,0 +1,11 @@
+$ {
+  const { isFluid, isWidescreen, isFullhd, class: className } = input;
+
+  const fluidClassName = isFluid && 'is-fluid';
+  const widescreenClassName = isWidescreen && 'is-widescreen';
+  const fullhdClassName = isFullhd && 'is-fullhd';
+}
+
+<div class=['container', fluidClassName, widescreenClassName, fullhdClassName, className]>
+  <include(input)/>
+</div>
