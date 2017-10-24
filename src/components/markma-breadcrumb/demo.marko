@@ -1,0 +1,21 @@
+$ {
+  const isActive = (pageId) => pageId === 'breadcrumbComponent';
+  const breadcrumbItems = [{
+    link: '/',
+    isActive: isActive('home'),
+    text: 'Home'
+  },
+  {
+    link: '/components/breadcrumb',
+    isActive: isActive('breadcrumbComponent'),
+    text: 'Breadcrumb Component'
+  }]
+}
+
+<markma-breadcrumb size='large' align='right' separator='bullet'>
+  <for(breadcrumbItem in breadcrumbItems)>
+    <markma-breadcrumb-item href=breadcrumbItem.link isActive=breadcrumbItem.isActive>
+      ${breadcrumbItem.text}
+    </markma-breadcrumb-item>
+  </for>
+</markma-breadcrumb>

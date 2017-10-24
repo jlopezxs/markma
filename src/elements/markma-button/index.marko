@@ -1,0 +1,12 @@
+$ {
+  const { tagName = 'a', color='primary', size, style, stateName, class: className } = input;
+
+  const colorClass = color && `is-${color}`;
+  const sizeClass = size && `is-${size}`;
+  const styleClass = style && `is-${style}`;
+  const stateClass = stateName && `is-${stateName}`;
+}
+
+<${tagName} class=["button", colorClass, sizeClass, styleClass, stateClass, className]>
+  <include(input)/>
+</${tagName}>

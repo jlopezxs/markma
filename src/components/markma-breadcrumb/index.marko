@@ -1,26 +1,14 @@
-import Joi from 'joi';
-
 $ {
-  const { size, alignment, separator, class:className, items=[] } = input;
-
-  Joi.validate(input, {
-    size: Joi.string().allow(['small', 'medium', 'large']).default('medium'),
-    alignment: Joi.string().allow(['centered', 'right']),
-    separator: Joi.string().allow(['arrow-separator','bullet-separator','dot-separator','succeeds-separator']),
-  });
+  const { size = 'medium', alignment, separator, class:className } = input;
 
   const sizeClass = size && `is-${size}`;
   const alignmentClass = alignment && `is-${alignment}`;
   const separatorClass = separator && `is-${separator}`;
 }
 
-<nav class=['breadcrumb', sizeClass, alignmentClass, separatorClass, className] aria-label="breadcrumbs">
+<nav class=["breadcrumb", sizeClass, alignmentClass, separatorClass, className]
+  aria-label="breadcrumbs">
   <ul>
-    <for(item in items)>
-      <li class=[item.isActive && 'is-active']>
-        <a href=[item.href || '#'] ${item.isActive && 'aria-current="page"'}>
-          ${item.text}
-        </a>
-      </li>
+    <include(input)/>
   </ul>
 </nav>

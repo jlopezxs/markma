@@ -5,7 +5,10 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "test": "npm run marko test"
+    "test": "npm run marko test",
+    "start": "marko-starter server",
+    "build": "NODE_ENV=production marko-starter build",
+    "serve-static": "NODE_ENV=production marko-starter serve-static"
   },
   "repository": {
     "type": "git",
@@ -18,10 +21,13 @@
   "homepage": "https://github.com/jlopezxs/markma#readme",
   "dependencies": {
     "bulma": "^0.6.0",
-    "marko": "^4.5.2"
+    "font-awesome": "^4.7.0",
+    "marko": "^4.5.2",
+    "marko-starter": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^4.9.0",
-    "eslint-config-marko": "^1.0.1"
+    "eslint-config-marko": "^1.0.1",
+    "lasso-sass": "^3.0.0"
   }
 }

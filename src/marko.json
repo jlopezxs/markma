@@ -1,0 +1,8 @@
+{
+    "tags-dir": [
+      "./components",
+      "./elements",
+      "./grid",
+      "./layout"
+    ]
+}
