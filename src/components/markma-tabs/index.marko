@@ -1,5 +1,21 @@
+class {
+  onInput(input) {
+    let tabs = input.tabs;
+    let active = tabs && tabs.findIndex((tab, i) => tab.active);
+    active = active === -1 ? 0 : active;
+
+    this.state = {
+      active: active
+    };
+  }
+
+  onTabClick() {
+     this.state.active++;
+  }
+}
+
 $ {
-  const { size, alignment, style, class:className } = input;
+  const { size, alignment, style, tabs, class:className } = input;
 
   const sizeClass = size && `is-${size}`;
   const alignmentClass = alignment && `is-${alignment}`;
@@ -7,7 +23,21 @@ $ {
 }
 
 <nav class=["tabs", sizeClass, alignmentClass, styleClass, className]>
+  ${state.active}
   <ul>
-    <include(input)/>
+    <for(tab in tabs | status-var=loop)>
+      <li class=[loop.getIndex() === state.active && 'is-active']>
+        <a href="#${tab.label}" on-click('onTabClick', 'tes')>
+          <include(tab.label)/>
+        </a>
+      </li>
+    </for>
   </ul>
 </nav>
+<div class="tabs-content">
+  <for(tab in tabs | status-var=loop)>
+    <div class=['tab-content', (loop.getIndex() === state.active) ? 'is-active' : 'is-hidden']>
+      <include(tab.renderBody)/>
+    </div>
+  </for>
+</div>

@@ -11,9 +11,10 @@ $ {
 }
 
 <markma-tabs style="boxed">
-  <for(tabsItem in tabsItems)>
-    <markma-tabs-item href=tabsItem.link isActive=tabsItem.isActive>
-      ${tabsItem.text}
-    </markma-tabs-item>
-  </for>
+  <@tab label="Profile">
+    Content for Profile
+  </@tab>
+  <@tab label="Messages">
+    Content for Messages
+  </@tab>
 </markma-tabs>

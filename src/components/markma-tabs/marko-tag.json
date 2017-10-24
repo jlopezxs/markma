@@ -1,0 +1,9 @@
+{
+  "@style": "string",
+  "@alignment": "string",
+  "@style": "string",
+  "@class": "string",
+  "@tabs <tab>[]": {
+    "@label": "string"
+  }
+}

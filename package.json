@@ -22,7 +22,7 @@
   "dependencies": {
     "bulma": "^0.6.0",
     "font-awesome": "^4.7.0",
-    "marko": "^4.5.2",
+    "marko": "^4.5.3",
     "marko-starter": "^1.0.0"
   },
   "devDependencies": {
